@@ -11,7 +11,7 @@ function calcular(tipo, valor){
             document.getElementById('resultado').value = valorDoCampo
         }
     }
-    else if (tipo === 'valor'){
+    else if (tipo === 'valor') {
         document.getElementById('resultado').value += valor
     }
 }
