@@ -1,58 +1,58 @@
-<html>
-	<head>
-		<title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	</head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/estilo.css">
+</head>
+<body>
+    <div id="calculadora">
+        <input type="text" id="visor-resultado" disabled placeholder="0">
 
-  <body style="background: #D9D9D9">
-
-    <div class="container">
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-          <br />
-
-          <div class="calculadora">
-            <input id="resultado" type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
-            
-            <div class="row">
-              <button type="button" onclick="calcular('acao', 'c')" class="btn btn-dark btn-lg clear font-weight-light">C</button>
-              <button type="button" onclick="calcular('acao', '/')" class="btn btn-dark btn-lg font-weight-light">/</button>
-              <button type="button" onclick="calcular('acao', '*')" class="btn btn-dark btn-lg font-weight-light">x</button>
-            </div>
-
-            <div class="row">
-              <button type="button" onclick="calcular('valor', '7')" class="btn btn-dark btn-lg font-weight-light">7</button>
-              <button type="button" onclick="calcular('valor', '8')" class="btn btn-dark btn-lg font-weight-light">8</button>
-              <button type="button" onclick="calcular('valor', '9')" class="btn btn-dark btn-lg font-weight-light">9</button>
-              <button type="button" onclick="calcular('acao', '-')" class="btn btn-dark btn-lg font-weight-light">-</button>
-            </div>
-            
-            <div class="row">
-              <button type="button" onclick="calcular('valor', '4')" class="btn btn-dark btn-lg font-weight-light">4</button>
-              <button type="button" onclick="calcular('valor', '5')" class="btn btn-dark btn-lg font-weight-light">5</button>
-              <button type="button" onclick="calcular('valor', '6')" class="btn btn-dark btn-lg font-weight-light">6</button>
-              <button type="button" onclick="calcular('acao', '+')" class="btn btn-dark btn-lg font-weight-light">+</button>
-            </div>
-
-            <div class="row">
-              <button type="button" onclick="calcular('valor', '1')" class="btn btn-dark btn-lg font-weight-light">1</button>
-              <button type="button"onclick="calcular('valor', '2')" class="btn btn-dark btn-lg font-weight-light">2</button>
-              <button type="button"onclick="calcular('valor', '3')" class="btn btn-dark btn-lg font-weight-light">3</button>
-              <button type="button"onclick="calcular('acao', '=')" class="btn btn-dark btn-lg enter">=</button>
-            </div>
-
-            <div class="row" style="margin-top: -60px">
-              <button type="button"onclick="calcular('valor', '0')" class="btn btn-dark zero btn-lg font-weight-light">0</button>
-              <button type="button"onclick="calcular('acao', '.')" class="btn btn-dark btn-lg font-weight-light">.</button>
-            </div>
-
-          </div>
+        <div class="linha">
+            <button type="button" onclick="calcular('acao', 'c')" id="clear" class="botoes">c</button>
+            <button type="button" onclick="calcular('acao', '/')" class="botoes">/</button>
+            <button type="button" onclick="calcular('acao', '*')" class="botoes">x</button>
         </div>
-      </div>
+    
+        <div class="linha">
+            <button type="button" onclick="calcular('valor', '7')" class="botoes">7</button>
+            <button type="button" onclick="calcular('valor', '8')" class="botoes">8</button>
+            <button type="button" onclick="calcular('valor', '9')" class="botoes">9</button>
+            <button type="button" onclick="calcular('acao', '-')" class="botoes">-</button>
+        </div>
+    
+        <div class="linha">
+            <button type="button" onclick="calcular('valor', '4')" class="botoes">4</button>
+            <button type="button" onclick="calcular('valor', '5')" class="botoes">5</button>
+            <button type="button" onclick="calcular('valor', '6')" class="botoes">6</button>
+            <button type="button" onclick="calcular('acao', '+')" class="botoes">+</button>
+        </div>
+    
+        <div class="linha">
+            <button type="button" onclick="calcular('valor', '1')" class="botoes">1</button>
+            <button type="button" onclick="calcular('valor', '2')" class="botoes">2</button>
+            <button type="button" onclick="calcular('valor', '3')" class="botoes">3</button>
+            <button type="button" onclick="calcular('acao', '=')" id="enter" class="botoes">=</button>
+        </div>
+    
+        <div class="linha">
+            <button type="button" onclick="calcular('valor', '0')" id="zero" class="botoes">0</button>
+            <button type="button" onclick="calcular('acao', '.')" class="botoes">.</button>
+        </div>
+
+        <footer id="contato">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/tiago-henrique-884856244/" target="_blank"><i title="Linkedin" class="fab fa-linkedin icons"></i></a></li>
+                    <li><a href="https://github.com/Tiagobtz" target="_blank"><i title="GitHub" class="fab fa-github icons"></i></a></li>
+                    <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox" target="_blank"><i title="Currículo" class="fas fa-file-alt icons"></i><a></li>
+                </ul>
+        </footer>
     </div>
     
-    <script src="index.js"></script>
-  </body>	
-
+    <script src="src/js/interacao.js"></script>
+</body>
 </html>
