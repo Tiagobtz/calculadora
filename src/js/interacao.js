@@ -7,7 +7,7 @@ function calcular(tipo, valor){
             document.getElementById('visor-resultado').value += valor
         }
         else if (valor === '='){
-            let valorDoCampo = eval(document.getElementById('visor-resultado').value)
+            valorDoCampo = eval(document.getElementById('visor-resultado').value)
             document.getElementById('visor-resultado').value = valorDoCampo
         }
     }
