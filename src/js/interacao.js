@@ -9,6 +9,10 @@ function calcular(tipo, valor){
         else if (valor === '='){
             valorDoCampo = eval(document.getElementById('visor-resultado').value)
             document.getElementById('visor-resultado').value = valorDoCampo
+
+            if (valorDoCampo === undefined){
+                document.getElementById('visor-resultado').value = ''
+            }
         }
     }
     else if (tipo === 'valor'){
